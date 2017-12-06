@@ -10,6 +10,6 @@ let phrase = {
   'airing': 'tuuletus',
   'of': 'ja',
   'grievances':'epakohtia'
-}
+};
 
 module.exports = phrase;
