@@ -14,7 +14,7 @@ let phrase = {
 
 let translatedPhrase = '';
 
-for (i = 0; i < inputArr.length; i++) {
+for (let i = 0; i < inputArr.length; i++) {
   translatedPhrase += ` ${phrase[inputArr[i]]}`;
 }
 
