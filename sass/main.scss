@@ -1,9 +1,26 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+#frank {
+    width: 20%;
+}
+
+#frank-img {
+    width: 100%;
+    height: 100%;
+}
 
 #content {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: auto;
+}
+
+#pole {
+    width: 20%;  
 }
 
 #inputArr {
