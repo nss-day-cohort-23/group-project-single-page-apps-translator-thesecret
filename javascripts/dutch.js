@@ -12,11 +12,14 @@ let phrase = {
     "grievances":"grieven"
 };
 
-let translatedPhrase = "";
 
-for (i = 0; i < inputArr.length; i++) { 
-  translatedPhrase += ` ${phrase[inputArr[i]]}`;
+function translateTo(inputArr) {
+  let translatedPhrase = "";
+  for (i = 0; i < inputArr.length; i++) { 
+    translatedPhrase += ` ${phrase[inputArr[i]]}`;
+  };
+  return translatedPhrase;
 };
 
-
-module.exports = translatedPhrase;
+ 
+module.exports = translateTo();
