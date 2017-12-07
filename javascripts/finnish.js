@@ -12,10 +12,13 @@ let phrase = {
   'grievances':'epakohtia'
 };
 
-let translatedPhrase = '';
 
-for (let i = 0; i < inputArr.length; i++) {
+function translateTo(inputArr) {
+  let translatedPhrase = '';
+
+  for (let i = 0; i < inputArr.length; i++) {
   translatedPhrase += ` ${phrase[inputArr[i]]}`;
-}
-
-module.exports = translatedPhrase;
+  }
+  return translatedPhrase;
+};
+module.exports = translateTo();
