@@ -1,9 +1,67 @@
+html {
+    background: lightblue url("../img/bg.jpg") repeat-x fixed center;
+}
+
+body {
+    display: flex;
+    flex-direction: row;   
+}
+
+#frank {
+    width: 40%;
+    text-align: center;
+}
+
+#frank-img {
+    width: 95%;
+    height: 95%;
+    filter: drop-shadow(5px 5px 5px black)
+}
+
+#shades-img {
+    transform: scaleX(-1) rotate(-7deg);
+    width: 18%;
+    position: absolute;
+    left: 9.5vw;
+    top: 9.5vw;
+    visibility: hidden;
+}
+
+.go {
+    visibility: visible !important;
+    animation-duration: 2s;
+    animation-name: drop;
+    animation-direction: reverse;
+    z-index: 1000000;
+}
+
+@keyframes drop {
+    to {top: -20vw}
+    from {top: 9.5vw}
+}
 
 #content {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: auto;
+}
+
+#outputContainer {
+    margin: 1em auto;
+    width: 100%; 
+    height: 20vw;
+    background: linear-gradient(to bottom, lightblue, rgb(129, 187, 204));
+    border: 1vw double snow;
+    border-radius: 3vw;
+}
+
+#output {
+    width: 80%;
+    color: white;
+    margin: 2em;
+    text-align: center;
+    font-size: 3vw;
 }
 
 #inputArr {

@@ -9,6 +9,10 @@ let inputText = document.getElementById("inputArr");
 let button = document.getElementById("btn");
 let outputDiv = document.getElementById("output");
 
+button.addEventListener('click', function() {
+    document.getElementById('shades-img').classList.toggle('go');
+});
+
 button.addEventListener("click", function() {
     let inputArr = inputText.value.split(" ");
     switch (langSelect.value) {
