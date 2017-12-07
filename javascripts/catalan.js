@@ -12,10 +12,12 @@ let phrase = {
     "grievences": "greuges" 
 };
 
-translatedPhrase = "";
+function translateTo(inputArr) {
+    let translatedPhrase = "";
+    for (i = 0; i < inputArr.length; i++) {
+        translatedPhrase += ` ${phrase[inputArr[i]]}`;
+    }
+    return translatedPhrase;
+};
 
-for (i = 0; i < inputArr.length; i++) {
-    translatedPhrase += ` ${phrase[inputArr[i]]}`;
-}
-
-module.exports = translatedPhrase;
+module.exports = translateTo();
