@@ -9,21 +9,21 @@ body {
 
 #frank {
     width: 40%;
-    border: 10px solid green; 
     text-align: center;
 }
 
 #frank-img {
     width: 95%;
     height: 95%;
+    filter: drop-shadow(5px 5px 5px black)
 }
 
 #shades-img {
     transform: scaleX(-1) rotate(-7deg);
     width: 18%;
     position: absolute;
-    left: 100px;
-    top: 115px;
+    left: 9.5vw;
+    top: 9.5vw;
     visibility: hidden;
 }
 
@@ -32,11 +32,12 @@ body {
     animation-duration: 2s;
     animation-name: drop;
     animation-direction: reverse;
+    z-index: 1000000;
 }
 
 @keyframes drop {
-    to {top: -200px}
-    from {top: 115px}
+    to {top: -20vw}
+    from {top: 9.5vw}
 }
 
 #content {
