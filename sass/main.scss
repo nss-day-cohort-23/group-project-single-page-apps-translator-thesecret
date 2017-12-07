@@ -2,7 +2,29 @@
 #content {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
     margin: auto;
 }
 
+#inputArr {
+    margin: 1em 0;
+    height: 3em;
+    font-size: 1.5em;
+}
+
+#language {
+    margin: auto;
+    height: 2em;
+    font-size: inherit;
+    width: 50%;
+}
+
+#btn {
+    width: 29%;
+    margin: auto;
+    margin-top: 1em;
+    height: 3em;
+    border-radius: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
