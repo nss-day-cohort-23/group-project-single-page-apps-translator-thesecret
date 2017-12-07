@@ -24,7 +24,16 @@ button.addEventListener("click", function() {
             break;
         case "4":
             outputDiv.innerHTML = italian.translateToItalian(inputArr);
+            
             break;
     }
+    speak();
+  });
+ 
+
+function speak(){
+  let msg = new SpeechSynthesisUtterance(outputDiv.innerText);
+  window.speechSynthesis.speak(msg);
+  
 }
-);
+
