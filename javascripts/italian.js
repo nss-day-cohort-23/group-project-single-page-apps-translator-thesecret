@@ -12,4 +12,10 @@ let phrase = {
     "grievances": "rimostranze"
 };
 
-module.exports = phrase;
+let translatedPhrase = "";
+
+for (let i= 0; i < inputArr.length; i++) {
+    translatedPhrase += ` ${phrase[inputArr[i]]}`;
+};
+
+module.exports = translatedPhrase;
