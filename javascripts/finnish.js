@@ -13,12 +13,12 @@ let phrase = {
 };
 
 
-function translateTo(inputArr) {
+function translateToFinnish(inputArr) {
   let translatedPhrase = '';
 
   for (let i = 0; i < inputArr.length; i++) {
   translatedPhrase += ` ${phrase[inputArr[i]]}`;
   }
   return translatedPhrase;
-};
-module.exports = translateTo();
+}
+module.exports = {translateToFinnish};

@@ -1,5 +1,5 @@
 'use strict';
- 
+
 let phrase = {
     "it": "ho",
     "is": "és",
@@ -9,15 +9,17 @@ let phrase = {
     "the": "el",
     "airing": "airejar",
     "of": "de",
-    "grievences": "greuges" 
+    "grievances": "greuges" 
 };
 
-function translateTo(inputArr) {
+function translateToCatalan(inputArr) {
+    console.log(inputArr);
     let translatedPhrase = "";
-    for (i = 0; i < inputArr.length; i++) {
+    for (let i = 0; i < inputArr.length; i++) {
         translatedPhrase += ` ${phrase[inputArr[i]]}`;
     }
     return translatedPhrase;
-};
+}
 
-module.exports = translateTo();
+
+module.exports = {translateToCatalan};
