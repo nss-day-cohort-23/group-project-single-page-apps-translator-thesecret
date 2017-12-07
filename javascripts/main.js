@@ -1,5 +1,4 @@
 'use strict';
-console.log("are we here?");
 let catalan = require('./catalan');
 let dutch = require('./dutch');
 let finnish = require('./finnish');
