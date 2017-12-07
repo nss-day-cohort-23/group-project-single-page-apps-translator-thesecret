@@ -31,8 +31,22 @@ button.addEventListener("click", function() {
   });
  
 
+// function speak(){
+//   let msg = new SpeechSynthesisUtterance(outputDiv.innerText);
+//   let voice = window.speechSynthesis.getVoices();
+//   console.log
+// // console.log(speechSynthesis());
+//   window.speechSynthesis.speak(msg);
+  
+// }
+
+
 function speak(){
   let msg = new SpeechSynthesisUtterance(outputDiv.innerText);
+   
+  let voices = window.speechSynthesis.getVoices();
+  let randVoice = Math.floor(Math.random()*voices.length) +1;
+  msg.voice = voices[randVoice];
   window.speechSynthesis.speak(msg);
   
 }

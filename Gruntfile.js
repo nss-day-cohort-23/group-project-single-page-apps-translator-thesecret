@@ -7,7 +7,7 @@ module.exports = function(grunt){
       jshint: {
         files: ['javascripts/**/*.js'],
       options: {
-        predef: ['document', 'console'],
+        predef: ['document', 'console', 'SpeechSynthesisUtterance'],
         esnext: true,
         globalstrict: true,
         globals: {},
