@@ -86,3 +86,100 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
 }
+
+#outputContainer {
+    margin: 1em auto;
+    width: 100%; 
+    height: 20vw;
+    background: linear-gradient(to bottom, lightblue, rgb(129, 187, 204));
+    border: 1vw double snow;
+    border-radius: 3vw;
+}
+
+#output {
+    width: 80%;
+    color: white;
+    text-shadow: 0 0 3vw rgba(0, 0, 0, .8), 0 0 12vw snow; 
+    margin: 3vw;
+    text-align: center;
+    font-size: 4vw;
+    z-index: 3;
+}
+
+.snowflake {
+    display: inline-block;
+    position: relative;
+    width: .8vw;
+    height: .8vw;
+    margin: auto 1.4vw; 
+    background: snow;
+    z-index: 1;
+    transform: rotate(20deg);
+    animation-name: snowfall;
+    animation-duration: 1.9s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+.snowflake::before {
+    content: "";
+    position: absolute;
+    width: .8vw;
+    height: .8vw;
+    background: snow;
+    z-index: 1;
+    transform: rotate(135deg);
+}
+
+.snowflake:nth-child(2) {
+    animation-duration: 2.4s;
+}
+
+.snowflake:nth-child(3) {
+    animation-duration: 3s;
+}
+
+.snowflake:nth-child(4) {
+    animation-duration: 2.8s;
+}
+
+.snowflake:nth-child(5) {
+    animation-duration: 2.5s;   
+}
+
+.snowflake:nth-child(6) {
+    animation-duration: 3.3s;   
+}
+
+.snowflake:nth-child(7) {
+    animation-duration: 2.3s;   
+}
+
+.snowflake:nth-child(8) {
+    animation-duration: 2.6s;  
+}
+
+.snowflake:nth-child(9) {
+    animation-duration: 3.6s;   
+}
+
+.snowflake:nth-child(10) {
+    animation-duration: 4.7s;   
+}
+
+.snowflake:nth-child(11) {
+    animation-duration: 2.9s;   
+}
+
+.snowflake:nth-child(12) {
+    animation-duration: 3.3s;  
+}
+
+@keyframes snowfall {
+    from {
+        transform: translateY(0vw);
+    } to {
+        transform: translateY(22vw); 
+    }
+}
