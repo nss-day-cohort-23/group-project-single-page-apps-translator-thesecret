@@ -1,15 +1,42 @@
+html {
+    background: lightblue url("../img/bg.jpg") repeat-x fixed center;
+}
+
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
 }
 
 #frank {
-    width: 20%;
+    width: 40%;
+    border: 10px solid green; 
+    text-align: center;
 }
 
 #frank-img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
+}
+
+#shades-img {
+    transform: scaleX(-1) rotate(-7deg);
+    width: 18%;
+    position: absolute;
+    left: 100px;
+    top: 115px;
+    visibility: hidden;
+}
+
+.go {
+    visibility: visible !important;
+    animation-duration: 2s;
+    animation-name: drop;
+    animation-direction: reverse;
+}
+
+@keyframes drop {
+    to {top: -200px}
+    from {top: 115px}
 }
 
 #content {
@@ -19,8 +46,21 @@ body {
     margin: auto;
 }
 
-#pole {
-    width: 20%;  
+#outputContainer {
+    margin: 1em auto;
+    width: 100%; 
+    height: 20vw;
+    background: linear-gradient(to bottom, lightblue, rgb(129, 187, 204));
+    border: 1vw double snow;
+    border-radius: 3vw;
+}
+
+#output {
+    width: 80%;
+    color: white;
+    margin: 2em;
+    text-align: center;
+    font-size: 3vw;
 }
 
 #inputArr {

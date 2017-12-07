@@ -1,5 +1,4 @@
 'use strict';
-console.log("are we here?");
 let catalan = require('./catalan');
 let dutch = require('./dutch');
 let finnish = require('./finnish');
@@ -9,6 +8,10 @@ let langSelect = document.getElementById("language");
 let inputText = document.getElementById("inputArr");
 let button = document.getElementById("btn");
 let outputDiv = document.getElementById("output");
+
+button.addEventListener('click', function() {
+    document.getElementById('shades-img').classList.toggle('go');
+});
 
 button.addEventListener("click", function() {
     let inputArr = inputText.value.split(" ");
