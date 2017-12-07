@@ -27,7 +27,19 @@ button.addEventListener("click", function() {
             break;
         case "4":
             outputDiv.innerHTML = italian.translateToItalian(inputArr);
+            
             break;
     }
+    speak();
+  });
+ 
+
+function speak(){
+  let msg = new SpeechSynthesisUtterance(outputDiv.innerText);
+  let voices = window.speechSynthesis.getVoices();
+  let randVoice = Math.floor(Math.random()*voices.length) +1;
+  msg.voice = voices[randVoice];
+  window.speechSynthesis.speak(msg);
+  
 }
-);
+
