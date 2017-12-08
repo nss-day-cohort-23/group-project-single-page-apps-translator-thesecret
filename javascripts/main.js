@@ -15,6 +15,14 @@ button.addEventListener('click', function() {
 
 button.addEventListener("click", function() {
     let inputArr = inputText.value.split(" ");
+    
+    inputArr.forEach(function(word, index, blank){
+      if (word == ''){
+      blank.splice(index);
+      }
+    });
+    
+
     switch (langSelect.value) {
         case "1":
             outputDiv.innerHTML = catalan.translateToCatalan(inputArr);
