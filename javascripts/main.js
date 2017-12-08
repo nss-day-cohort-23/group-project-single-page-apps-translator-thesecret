@@ -15,26 +15,27 @@ button.addEventListener('click', function() {
 
 button.addEventListener("click", function() {
     let inputArr = inputText.value.split(" ");
-    
-    inputArr.forEach(function(word, index, blank){
-      if (word == ''){
-      blank.splice(index);
+    let noSpaceArr = [];
+    for (let i=0; i< inputArr.length; i++){
+      if (inputArr[i] !== ''){
+        noSpaceArr.push(inputArr[i]);
       }
-    });
-    
+    }
+   
+    console.log(noSpaceArr);
 
     switch (langSelect.value) {
         case "1":
-            outputDiv.innerHTML = catalan.translateToCatalan(inputArr);
+            outputDiv.innerHTML = catalan.translateToCatalan(noSpaceArr);
             break;
         case "2":
-            outputDiv.innerHTML = dutch.translateToDutch(inputArr);
+            outputDiv.innerHTML = dutch.translateToDutch(noSpaceArr);
             break;
         case "3":
-            outputDiv.innerHTML = finnish.translateToFinnish(inputArr);
+            outputDiv.innerHTML = finnish.translateToFinnish(noSpaceArr);
             break;
         case "4":
-            outputDiv.innerHTML = italian.translateToItalian(inputArr);
+            outputDiv.innerHTML = italian.translateToItalian(noSpaceArr);
             
             break;
     }
